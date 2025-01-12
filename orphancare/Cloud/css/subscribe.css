@@ -1,0 +1,141 @@
+body{
+    font-family: sans-serif;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.hero{
+    animation: fadeIn 1s ease-in-out;
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+.navbar {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
+    padding: 20px 0;
+}
+
+.active {
+    background-color: #2a6786;
+    color: white !important;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.navbar .navbar-brand, .navbar .nav-link:not(.active) {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+
+.navbar .nav-link:hover:not(.active) {
+    color: #2a6786;
+}
+
+.btn {
+    background-color: #2a6786;
+    border: none;
+    font-size: 1.2rem;
+    padding: 15px;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    padding: 15px;
+}
+
+.form-control:focus {
+    border-color: #2a6786;
+    box-shadow: 0 0 5px #2a6786;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-section {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #2a6786;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nand {
+    color: #2a6786;
+    font-weight: 300;
+    font-size: 70px;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.payment-icons img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.payment-icons img:hover {
+    transform: scale(1.1);
+}
+
+.text-center {
+    text-align: justify;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.foot {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: black;
+    padding: 10px 0;
+    margin: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #2a6786;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #6c757d;
+}

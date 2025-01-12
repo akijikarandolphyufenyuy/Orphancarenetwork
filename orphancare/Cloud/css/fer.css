@@ -1,0 +1,474 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: #2a6786;
+}
+
+h3 {
+    color: rgb(15, 14, 61);
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+.sidebar-responsive {
+    transform: translateX(0);
+}
+
+/* Main container */
+.main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 0 20px;
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        margin-left: 0;
+    }
+}
+
+/* Sidebar content */
+.sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #1e272e;
+    color: #fff;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-list-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #dfe6e9;
+}
+
+.sidebar-list-item:hover {
+    background: #636e72;
+    color: #fff;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #2d3436;
+    color: #fff;
+}
+
+.header .menu-icon {
+    cursor: pointer;
+}
+
+.header .fa {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 14px;
+    }
+}
+
+/* Grid container for layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 280px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    grid-template-areas: 
+        "sidebar header header header"
+        "sidebar main main main";
+    height: 100vh;
+}
+
+.material-icons-outlined {
+    vertical-align: middle;
+    line-height: 1px;
+}
+
+/* Header  */
+.header {
+    grid-area: header;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+    display: none;
+}
+
+#logout {
+    padding: 8px;
+    background: red;
+    border-radius: 20px;
+}
+
+#logout a {
+    color: white;
+    text-decoration: none;
+    font-weight: 550;
+}
+
+/* Sidebar  */
+#sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    background: #2a6786;
+    color: white;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s;
+}
+
+/* Ensure the sidebar is hidden on smaller screens */
+@media (max-width: 768px) {
+    #sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #111;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar-responsive {
+        display: block;
+    }
+
+    .sidebar-title {
+        background-color: #111;
+        color: white;
+        padding: 15px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .sidebar-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .sidebar-list li {
+        padding: 10px;
+    }
+
+    .sidebar-list li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Add a close icon inside the sidebar */
+    .fa-times {
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        color: #111;
+        cursor: pointer;
+        margin: 20px;
+    }
+
+    .main-container {
+        margin-left: 0;
+    }
+}
+
+/* For larger devices, keep the sidebar visible */
+@media (min-width: 769px) {
+    #sidebar {
+        display: block;
+    }
+
+    .main-container {
+        margin-left: 250px; /* Sidebar width */
+    }
+}
+
+.sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-title > span {
+    display: none;
+}
+
+.sidebar-list > li {
+    list-style: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar-list > li a {
+    text-decoration: none;
+    color: white;
+    padding: 0% 10px;
+}
+
+.sidebar-brand {
+    margin-top: 15px;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.sidebar-list {
+    padding: 0;
+    margin-top: 15px;
+    list-style-type: none;
+}
+
+.sidebar-list-item {
+    padding: 10px;
+}
+
+.sidebar-list-item:hover {
+    background-color: rgba(225, 225, 225, 0.2);
+    cursor: pointer;
+}
+
+.sidebar-responsive {
+    display: inline !important;
+    position: absolute;
+}
+
+/* Main content  */
+.main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 0 20px;
+    background-color: whitesmoke;
+}
+
+.main-container .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.main-container .stat {
+    position: relative;
+    width: 20%;
+    color: #2a6786;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.main-container .stat h3 {
+    margin: 0;
+}
+
+/* Admin add form */
+.admin_add {
+    margin-top: 5%;
+    padding: 20px 40px;
+    background: #2a6786;
+    border-radius: 10px;
+}
+
+.form {
+    width: 80%;
+    margin: auto;
+}
+
+.form-col {
+    flex-basis: 50%;
+}
+
+.form-col h3 {
+    color: white;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.form-col div {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    .form-row {
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .form-col h2 {
+        font-size: 12px;
+        line-height: 25px;
+        text-align: left;
+    }
+}
+
+.form-col input {
+    width: 100%;
+    color: #2a6786;
+    border: none;
+    padding: 12px;
+    outline: none;
+    margin-bottom: 17px;
+    border-radius: 5px;
+}
+
+.form-col input:hover {
+    border-bottom: 1px solid rgb(5, 5, 53);
+}
+
+.form-col button {
+    position: relative;
+    float: left;
+    background: rgb(13, 13, 82);
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 12px 14px;
+    transition: 0.5s;
+}
+
+.form-col button:hover {
+    box-shadow: 0 0 20px 0 rgb(15, 14, 61);
+    transition: .5s;
+}
+
+/* media queries */
+@media screen and (max-width: 950px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas: 
+            "header"
+            "main";
+    }
+
+    #sidebar {
+        display: none;
+        z-index: 10;
+    }
+
+    .menu-icon {
+        display: inline;
+    }
+
+    .sidebar-title {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .stats {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        z-index: 0.5;
+    }
+
+    .stat {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 0px;
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header-left {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn {
+        padding: 0.3rem 0.8rem;
+        font-size: 12px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .sidebar-list-item span {
+        font-size: 16px;
+    }
+}
+
+/* Main container */
+.main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 0 20px;
+    margin-left: 0;
+}

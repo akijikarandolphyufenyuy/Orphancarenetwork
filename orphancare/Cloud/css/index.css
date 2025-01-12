@@ -1,0 +1,296 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.carousel-caption{
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* NABAR SECTION STYLING */
+.navbar {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays on top of other elements */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  padding: 20px 0;
+}
+
+.active{
+  background-color: #2a6786;
+  color: white !important;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.navbar .navbar-brand, .navbar .nav-link:not(.active) {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+.navbar .nav-link:hover:not(.active) {
+  color: #2a6786;
+}
+
+/* Carousel Styling */
+.carousel-inner img {
+  opacity: 0.6;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Learn More Button Animation */
+.btn-animate {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Description Section */
+.description {
+  display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 90px 45px;
+ background-color: #ffffff;
+    
+}
+
+/* Text Section */
+.description .text {
+  flex: 1;
+  font-weight: 520;
+  padding-right: 25px;
+  text-align: justify; /* Justify the text */
+}
+
+.description .text p {
+  /* margin: 100px 15px; */
+  font-size: 1.1rem;
+  line-height: 30px;
+  color: black;
+}
+
+/* Image Section */
+    .description img {
+      width: 50%; 
+      object-fit: cover; 
+      height: 80vh;   
+      border-radius: 25px;  
+  }
+
+  .description h5 {
+    text-align: center; 
+    font-size: 40px;
+    font-weight: 600;
+    color:#2a6786;
+}
+
+
+/* Services Section */
+.services {
+  padding: 60px 20px;
+  background-color: whitesmoke;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.service-card {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.service-card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+.card-body {
+  text-align: center;
+}
+
+ /* Card Title Styling */
+ .card-title {
+  font-size: 1.5rem; /* Slightly larger text for card title */
+  font-weight: 600; /* Bold for emphasis */
+  color: #2a6786; 
+  margin-bottom: 0.5rem; /* Space between title and text */
+}
+
+/* Card Text Styling */
+.card-text {
+  font-size: 1.2rem; /* Standard text size */
+  line-height: 1.5; /* Make text more readable */
+  margin-bottom: 1rem; /* Add space between paragraph and bottom */
+}
+
+/* Add some padding to the card for a cleaner look */
+.service-card .card-body {
+  padding: 1.25rem; /* Slight padding for readability */
+}
+
+/* FAQ Section */
+.faq {
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #2a6786;
+}
+
+.accordion-button{
+  font-size: 1.3rem;
+  outline: none;
+}
+
+.accordion-collapse{
+  font-size: 1.1em;
+  color: black;
+  outline: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: #2a6786;
+}
+
+
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    color: white;
+    background: none !important;
+    padding: 20px;
+    margin: 0;
+    padding: 0 !important;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .carousel-caption a {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+    .description{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+}
+
+/* Footer Styling */
+.footer {
+  background-color: black;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.footer h5 {
+  color: #2a6786;
+  font-weight: 600;
+  font-size: 22px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.footer h6{
+  color: #2a6786;
+  font-size: 19px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0 10px;
+}
+.bi{
+  color:#2a6786;
+}
+.bi:hover{
+  color: white;
+  transition: .5s;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: #495057;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.footer .social-icons a:hover {
+  background-color: #17a2b8;
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #cccccc;
+}

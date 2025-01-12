@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;  
+    padding-top: 0;
+    position: relative;
+    background: linear-gradient(45deg, #17a2b8, #00c6ff, #00d2ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    background-attachment: fixed;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.navbar {
+    background-color: #343a40;
+    margin-bottom: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: #ffffff;
+}
+
+.navbar .nav-link:hover {
+    color: #17a2b8;
+}
+
+/* Form Styles */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.form-container h2 {
+    margin-bottom: 30px;
+    color: #343a40;
+    font-weight: bold;
+}
+
+.form-container .form-label {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.form-container input, .form-container select, .form-container textarea {
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+}
+
+.form-container input:focus, .form-container select:focus, .form-container textarea:focus {
+    border-color: #17a2b8;
+    box-shadow: 0 0 5px rgba(23, 162, 184, 0.5);
+}
+
+.form-container button {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #17a2b8;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #138496;
+}
+
+Hover effects for the form fields
+.form-container input:hover, .form-container select:hover, .form-container textarea:hover {
+    border-color: #17a2b8;
+}
+
+/* Animation for the form */
+ @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer .footer-section {
+    margin-bottom: 20px;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #495057;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.footer .social-icons a:hover {
+    background-color: #17a2b8;
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #cccccc;
+}
